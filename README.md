@@ -37,3 +37,46 @@ For example, in the task of text generation, an LSTM or GRU network can learn th
 
 # Code examples
 
+# Example 1
+
+In this example, we explore the Long Short-Term Memory (LSTM) neural network, which is a variant of recurrent neural networks (RNNs). LSTMs are particularly useful for sequential data tasks, such as time series forecasting or natural language processing, where there are long-term dependencies between data points.
+
+Data Generation:
+We begin by generating synthetic sequential data for our LSTM model. The data consists of two sequences, each containing ten consecutive numbers. The target is the third number in each sequence. We convert this data into PyTorch tensors, which is the format required for processing with PyTorch.
+
+LSTM Model Architecture:
+The LSTM model is defined using the LSTMModel class. Inside the class, we set up the LSTM layer, which takes a sequence of one-dimensional inputs and processes them in a time-ordered manner. We also include a fully connected layer to predict the next number in the sequence. The model architecture captures the patterns and dependencies present in the input sequences.
+
+Forward Pass:
+The forward method within the LSTMModel class describes how data flows through the model. During the forward pass, the LSTM processes the input sequences, capturing important information over time. The hidden state and cell state are initialized at the beginning of each forward pass and updated as the LSTM processes the data.
+
+Loss Function and Optimizer:
+For training, we define the Mean Squared Error (MSE) loss function to quantify the difference between predicted and actual values. To optimize the model's parameters during training, we use the Adam optimizer, which adapts the learning rate based on the gradients of the model's parameters.
+
+Training Loop:
+We run a loop for a specified number of epochs to train the LSTM model. In each epoch, we forward propagate the input sequences through the model, compute the loss, perform backpropagation to calculate gradients, and update the model's parameters using the optimizer. The goal is to minimize the loss and improve the model's prediction accuracy.
+
+Testing the Trained Model:
+After training, we evaluate the LSTM model's performance on a test sequence, [10, 11]. The trained LSTM predicts the next number in the sequence based on the learned patterns from the training data.
+
+# Example 2
+
+In this example, we explore the Gated Recurrent Unit (GRU), which is a variant of recurrent neural networks (RNNs). Like LSTMs, GRUs are particularly useful for sequential data tasks, but they have fewer parameters and are often computationally faster.
+
+Data Generation:
+We start by generating synthetic sequential data, which consists of two sequences, each containing ten consecutive numbers. The target is the third number in each sequence. We convert this data into PyTorch tensors, preparing it for processing with PyTorch.
+
+GRU Model Architecture:
+The GRU model is defined using the GRUModel class. Inside this class, we set up the GRU layer, which takes a sequence of one-dimensional inputs and processes them in a time-ordered manner. Additionally, we include a fully connected layer to predict the next number in the sequence. The model architecture captures the patterns and dependencies present in the input sequences.
+
+Forward Pass:
+The forward method within the GRUModel class describes how data flows through the model. During the forward pass, the GRU processes the input sequences, capturing important information over time. The hidden state is initialized at the beginning of each forward pass and updated as the GRU processes the data.
+
+Loss Function and Optimizer:
+For training, we define the Mean Squared Error (MSE) loss function to measure the difference between predicted and actual values. To optimize the model's parameters during training, we use the Adam optimizer, which adapts the learning rate based on the gradients of the model's parameters.
+
+Training Loop:
+We run a loop for a specified number of epochs to train the GRU model. In each epoch, we forward propagate the input sequences through the model, compute the loss, perform backpropagation to calculate gradients, and update the model's parameters using the optimizer. The goal is to minimize the loss and improve the model's prediction accuracy.
+
+Testing the Trained Model:
+After training, we evaluate the GRU model's performance on a test sequence, [10, 11]. The trained GRU predicts the next number in the sequence based on the learned patterns from the training data.
