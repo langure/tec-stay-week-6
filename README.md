@@ -29,3 +29,11 @@ For example, in the task of text generation, an LSTM or GRU network can learn th
 
 # Readings
 
+[Long Sort-Term Memory](https://www.bioinf.jku.at/publications/older/2604.pdf)
+
+[Tutorial on GRU](https://d2l.ai/chapter_recurrent-modern/gru.html)
+
+[Using LSTM and GRU neural network methods for traffic flow prediction](https://www.researchgate.net/profile/Li-Li-86/publication/312402649_Using_LSTM_and_GRU_neural_network_methods_for_traffic_flow_prediction/links/5c20d38d299bf12be3971696/Using-LSTM-and-GRU-neural-network-methods-for-traffic-flow-prediction.pdf)
+
+# Code examples
+
